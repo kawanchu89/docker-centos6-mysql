@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  db:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - 3306:3306
+    volumes:
+      - ./my.cnf:/etc/my.cnf
+    privileged: false
